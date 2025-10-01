@@ -9,18 +9,7 @@ This is my demo repository for learning Git and GitHub.
 - Committing changes
 - Pushing to GitHub
 
-## Branch: samson-oduor
-This branch contains my personal changes and experiments.
 
-## Project Description
-This project demonstrates:
-- Basic Git workflow (add, commit, push)
-- Branch creation and management
-- Collaboration using GitHub
-- Version control best practices
 
-## Author
-Sam Oduor - QA Engineer
 
-#
-Apart From That, we are trying the difference with conflicts
+

@@ -1,9 +1,26 @@
 import java.text.NumberFormat;
 import java.util.Scanner;
 
-public class MortgageCalculator {
+public class MortgageCalculator implements MortgageCalculatorInterface {
+    private int principal;
+    private double interestRate;
+    private int years;
+
+    public MortgageCalculator(int principal, double interestRate, int years) {
+        this.principal = principal;
+        this.interestRate = interestRate;
+        this.years = years;
+    }
+
+     @Override
+     public double calculateMonthlyPayment() {
+         double monthlyRate = interestRate / 100 / 12;
+         int numberOfPayments = years * 12;
+         return (principal * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -numberOfPayments));
+    }
+
     public static void main(String[] args) {
-        
+
         Scanner scanner = new Scanner(System.in);
 
         int principal = 0;
@@ -66,10 +83,10 @@ public class MortgageCalculator {
                 * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))
                 / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);
 
-        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);        
+        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
         System.out.println("Mortgage: " + mortgageFormatted);
         scanner.close();
 
     }
-    
+
 }

@@ -9,7 +9,4 @@ This is my demo repository for learning Git and GitHub.
 - Committing changes
 - Pushing to GitHub
 
-
-
-
-
+#
